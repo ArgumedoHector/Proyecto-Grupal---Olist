@@ -14,13 +14,26 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import string as string
 
-# %%
-#asegurate de estar en carpeta : Proyecto-Grupal---Olist sino la posees creala
-#os.chdir("C:/Users/Ricardo/Desktop/Proyecto-Grupal---Olist/")
+# %% [markdown]
+# Asegurarnos de estar en carpeta : Proyecto-Grupal---Olist sino la posees creala
 
 # %%
-#Revisando el directorio correcto
+
+#os.chdir("C:/Users/Ricardo/Desktop/Proyecto-Grupal---Olist/")
+
+# %% [markdown]
+# Revisando el directorio correcto y creando el directorio para el input al ETL. Se maneja el error en caso el directorio exista para no suspender el programa.
+
+# %%
+
 os.getcwd()
+try:
+    os.mkdir("ETL")
+except FileExistsError as error:
+    print("Directorio para ETL ya estaba creado.")
+
+# %% [markdown]
+# Accesando el link de drive 
 
 # %%
 
@@ -31,17 +44,24 @@ print("conectando con Google drive y leyendo archivos ...")
 files = gdown.download_folder(url, quiet=True, use_cookies=False)
 files
 
+# %% [markdown]
+# Extraemos exclusivamente el nombre diferencial del archivo
+
 # %%
-#Captura de los nombres de los archivos
+
 nombres=[]
 for file in files:
-    lista = file.split("Datasets\\")
+    lista = file.split("Datasets\\") 
     nombre = lista[1].replace("olist_","").replace(".csv","").replace("_dataset","").capitalize()
     nombres.append(nombre)
     
     
 
+# %% [markdown]
+# Entramos al bucle iterador de revisión de la data. Dentro de la transformación de fechas, el programa revisa si existe algún título de columna que contenga las palabras **date** o **stamp**, en caso de encontrarlas, se efectúa la transformación correspondiente a formato **datetime**.
+
 # %%
+
 
 for pos,file in enumerate(files) :
     
@@ -75,6 +95,10 @@ for pos,file in enumerate(files) :
     print("\n")
     print(data.isna().sum(axis=0))
     print("\n")
+    plt.figure(figsize=(27,5))
+    mapa = sns.heatmap(data.isna())
+    figure =mapa.get_figure()
+    
 
     print("Revisión de algun campo fecha")
     print("------------------------------")
@@ -88,6 +112,8 @@ for pos,file in enumerate(files) :
         data.info()
     else:
         print(f"El archivo {nombres[pos]} no posee campos de tipo Date.")
+
+    data.to_csv("ETL/"+nombres[pos]+".csv")
 
 
 
