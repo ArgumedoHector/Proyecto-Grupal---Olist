@@ -114,9 +114,10 @@ for i in range(0,100):
     Order_reviews['review_comment_title'][i]=strip_emoji(Order_reviews['review_comment_title'][i])
 
 # %% [markdown]
-# Normalización de la tabla Order_reviews
+# Normalización de las tablas.
 
 # %%
+#Comenzamos normalizando la tabla Order reviews
 Order_reviews['review_comment_message'] = Order_reviews['review_comment_message'].str.replace('\r\n',' ')
 Order_reviews['review_comment_message'] = Order_reviews['review_comment_message'].apply(lambda text: emoji.demojize(text, delimiters=("", "")))
 Order_reviews['review_comment_message'] = Order_reviews['review_comment_message'].str.replace(';',',')
@@ -127,5 +128,25 @@ Order_reviews['review_comment_title'] = Order_reviews['review_comment_title'].ap
 Order_reviews['review_comment_title'] = Order_reviews['review_comment_title'].str.replace(';',',')
 Order_reviews['review_comment_title'] = Order_reviews['review_comment_title'].str.replace('"','')
 Order_reviews['review_comment_title'] = Order_reviews['review_comment_title'].str.replace('\\','')
+
+# %%
+#Cambiamos los nombres de las columnas 
+Order_reviews = Order_reviews.rename(columns={'review_comment_message':'comment_message', 'review_creation_date':'creation_date', 'review_comment_title':'comment_title', 'review_answer_timestamp':'answer_timestamp'})
+
+# %%
+#Cambiamos los nombres de las columnas en sellers
+Sellers = Sellers.rename(columns={'seller_zip_code_prefix':'zip_code_prefix', 'seller_city':'city', 'seller_state':'state'})
+
+# %%
+#Cambiamos los nombres de las columnas en orders
+Orders = Orders.rename(columns={'order_purchase_timestamp':'purchase_timestamp', 'order_delivered_carrier_date':'delivered_carrier_date', 'order_delivered_customer_date':'delivered_customer_date', 'order_estimated_delivery_date':'estimated_delivery_date'})
+
+# %%
+#Cambiamos los nombres de las columnas en geolocation
+Geolocation = Geolocation.rename(columns={'geolocation_zip_code_prefix':'zip_code_prefix', 'geolocation_city':'city', 'geolocation_state':'state', 'geolocation_lat':'latitude', 'geolocation_lng':'longitude', 'geolocation_region':'region'})
+
+# %%
+#Cambiamos los nombres de las columnas en products
+Products = Products.rename(columns={'product_description_lenght':'description_length', 'product_name_lenght':'name_length', 'product_weight_g':'weight_g', 'product_length_cm':'length_cm', 'product_height_cm':'height_cm', 'product_width_cm':'width_cm', 'product_photos_qty':'photos_quantity'})
 
 
