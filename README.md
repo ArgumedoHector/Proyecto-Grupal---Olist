@@ -60,6 +60,7 @@ diferentes plataformas (Google review y Twitter).
    - Con la Plataforma de Google Cloud (de ahora en mas GCP), utilizando la herramienta Cloud Storage se establece varios Buckets. Estos Buckets permiten almacenar
      infromación, y destinamos uno para que la empresa deposite los archivos, otro lo destinamos a conformar el DATA-LAKE donde estara para ser consultados tantos los      archivos de la empresa Olist, asi como los que por nuestra investigacion y desarrollo sean pertinentes. Tambien dispondremos de un Bucket "Historial" donde los        archivos serán registrados en un documento Historial, que se usará para evaluar si ingresan nuevos archivos distintos o si simplemente son archivos ya cargados y      destinar los mismos al Bucket correspondiente del proceso automático. Dispondremos de un Bucket "ETL" para dejar estos archivos nuevos y que sean automaticamente      tratados y normalizados por las Cloud Functions para ser entregados al Bucket "Stage".
    - Creamos un DATA-WAREHOSE en BigQuery, herramienta de GCP, tomando esos archivos del Bucket "Stage" y creamos tablas para luego ser consultadas por medio de            lenguaje SQL. 
+   - Link del video que resume el movimiento de los archivos: https://youtu.be/MtjFQ8BEaMk
    
  - Tercer semana:
    - Aplicaremos la herramienta de Power BI para generar dashboards con analisis, metricas y KPIs.
