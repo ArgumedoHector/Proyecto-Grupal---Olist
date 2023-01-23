@@ -40,6 +40,7 @@ compras, entre otros.
 - Tambien se encuentra otra carpeta llamada Datasets_secundarios con archivos raw en formato CSV con comentarios de 
 diferentes plataformas (Google review y Twitter).
 
+<img src ='https://www.informatique-mania.com/wp-content/uploads/2020/12/Archivo-extension-CSV.jpg' height = 200><img src ='https://assets-global.website-files.com/602cf6148109ccfeb1d80c49/60d4509851d12743d030a9eb_5c11336dd43b9272273fb4ce_Google-Reviews.jpeg' height = 200><img src ='https://jimp.com.ar/wp-content/uploads/2017/04/twiterr.jpg' height = 200>
     
 # Procesos
 - Primer Semana:
