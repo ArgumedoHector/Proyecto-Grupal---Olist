@@ -38,23 +38,31 @@ compras, entre otros.
 # Datos
 - En este repositorio se encuentra la carpeta Datasets que son los archivos raw en formato CSV proporcionados por Olist
 - Tambien se encuentra otra carpeta llamada Datasets_secundarios con archivos raw en formato CSV con comentarios de 
-diferentes plataformas (Instagram, Facebook, Google review, Twitter).
+diferentes plataformas (Google review y Twitter).
 
     
 # Procesos
-- Carga Delta de datos.
-- EDA -- (Analisis Exploratorio de Datos)
-    En esta primera instancia, trabajando desde Visual Studio Code en un entorno de Python, se cargan los priomeros archivos CSV 
-    para identificar que tipo de datos se encuentran y la calidad de los mismos. Esto de detalla en un informe (IT-brothers.pdf) 
-    que ademas contiene el resto de los procesos.
-- ETL -- (Extracción, Transformacion y Carga)
-    Aqui teniendo en cuenta los objetivos planteados se procede a las transformaciones necesarias para que nos permite obtener
-    datos limpios y normalizados. Esto se encuentra en una carpeta llamada ETL.
-- Creación de un diccionario de datos
-- Carga de datos a la nube de Google Cloud Plataform, donde se definirá un Data Lake o Data Warehouse.
-- Con Airflow pretendemos automatizar los procesos anteriores.
-- Aplicaremos la herramienta de Power BI para generar dashboards con analisis, metricas y KPIs.
-- Utilizaremos modelos de Machine Learning con motores de recomendación y/o análisis de sentimientos, ya sea para mejorar 
-proceso de ventas y/o posicionamiento de marca.
-    
-<img src ='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png' height = 150><img src ='https://i.pinimg.com/originals/8c/59/60/8c5960af6cf46913129f7ef927229af7.png' height = 150><img src ='https://airflow.apache.org/images/feature-image.png' height = 150>
+- Primer Semana:
+   - Carga Delta de datos.
+   - EDA -- (Analisis Exploratorio de Datos)
+     En esta primera instancia, trabajando desde Visual Studio Code en un entorno de Python, se cargan los primeros archivos CSV 
+     para identificar que tipo de datos se encuentran y la calidad de los mismos. Esto de detalla en un informe (IT-brothers.pdf) 
+     que ademas contiene el resto de los procesos.
+   - ETL -- (Extracción, Transformacion y Carga)
+     Aqui teniendo en cuenta los objetivos planteados se procede a las transformaciones necesarias para que nos permite obtener
+     datos limpios y normalizados. 
+   - Creación de un diccionario de datos
+   - Carga de datos a la nube de Google Cloud Plataform, donde se definirá un Data Lake o Data Warehouse.
+ 
+ - Segunda semana:    
+   - Con Google Cloud Functions, herramienta nativa de la plataforma, pretendemos automatizar los procesos anteriores utilizando cono disparador cada carga de archivos      nuevas en un *Bucket*.
+   - Con la Plataforma de Google Cloud (de ahora en mas GCP), utilizando la herramienta Cloud Storage se establece varios Buckets. Estos Buckets permiten almacenar
+     infromación, y destinamos uno para que la empresa deposite los archivos, otro lo destinamos a conformar el DATA-LAKE donde estara para ser consultados tantos los      archivos de la empresa Olist, asi como los que por nuestra investigacion y desarrollo sean pertinentes. Tambien dispondremos de un Bucket "Historial" donde los        archivos serán registrados en un documento Historial, que se usará para evaluar si ingresan nuevos archivos distintos o si simplemente son archivos ya cargados y      destinar los mismos al Bucket correspondiente del proceso automático. Dispondremos de un Bucket "ETL" para dejar estos archivos nuevos y que sean automaticamente      tratados y normalizados por las Cloud Functions para ser entregados al Bucket "Stage".
+   - Creamos un DATA-WAREHOSE en BigQuery, herramienta de GCP, tomando esos archivos del Bucket "Stage" y creamos tablas para luego ser consultadas por medio de            lenguaje SQL. 
+   
+ - Tercer semana:
+   - Aplicaremos la herramienta de Power BI para generar dashboards con analisis, metricas y KPIs.
+   - Utilizaremos modelos de Machine Learning con motores de recomendación y/o análisis de sentimientos, ya sea para mejorar 
+     proceso de ventas y/o posicionamiento de marca.
+ 
+<img src ='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png' height = 150><img src ='https://i.pinimg.com/originals/8c/59/60/8c5960af6cf46913129f7ef927229af7.png' height = 150><img src ='https://miro.medium.com/max/584/1*q4EVSAndlvgFLyR6ncc4Bg.png' height = 150>
