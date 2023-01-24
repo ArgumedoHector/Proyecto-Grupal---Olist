@@ -103,9 +103,7 @@ def etl(event, context):    #declaramos funcion que leera el bucket de ETL
         df['delivered_carrier_date'] = pd.to_datetime(df['delivered_carrier_date'])
         df['delivered_customer_date'] = pd.to_datetime(df['delivered_customer_date'])
         df['estimated_delivery_date'] = pd.to_datetime(df['estimated_delivery_date'])
-        df['order_approved_at'].fillna('None',inplace=True)
-        df['delivered_carrier_date'].fillna('None',inplace=True)
-        df['delivered_customer_date'].fillna('None',inplace=True)
+        #Los NAS no se rellenan ya que biqquery no efectua la carga por el tipo de campo, se dejara en null
         df.to_csv('gs://olist_stage/orders.csv', index=False)
 
     elif "category" in source_file_name:
@@ -115,14 +113,8 @@ def etl(event, context):    #declaramos funcion que leera el bucket de ETL
 
     elif "Products" in source_file_name:
         df = df.rename(columns={'product_id':'Id_product', 'product_description_lenght':'description_length', 'product_name_lenght':'name_length', 'product_weight_g':'weight_g', 'product_length_cm':'length_cm', 'product_height_cm':'height_cm', 'product_width_cm':'width_cm', 'product_photos_qty':'photos_quantity'})
+        #Los NAS no se rellenan ya que biqquery no efectua la carga por el tipo de campo, se dejara en null
         df['product_category_name'].fillna('Sin dato',inplace=True)
-        df['name_length'].fillna('Sin dato',inplace=True)
-        df['description_length'].fillna('Sin dato',inplace=True)
-        df['photos_quantity'].fillna('Sin dato',inplace=True)
-        df['weight_g'].fillna('Sin dato',inplace=True)
-        df['length_cm'].fillna('Sin dato',inplace=True)
-        df['height_cm'].fillna('Sin dato',inplace=True)
-        df['width_cm'].fillna('Sin dato',inplace=True)
         df.to_csv('gs://olist_stage/products.csv', index=False)
 
     elif "Sellers" in source_file_name:
