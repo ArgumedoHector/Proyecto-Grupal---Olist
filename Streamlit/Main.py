@@ -5,7 +5,7 @@ st.markdown('***')
 
 c1,c2 =st.columns([3,10])
 
-c2.image("logo_It.png")
+#c2.image("logo_It.png")
 
 c2.markdown("## IT - Brothers")
 c2.markdown("##### Hector Argumedo  - Data Engineer / Data Analyst")
