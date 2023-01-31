@@ -72,20 +72,34 @@ diferentes plataformas (Google review y Twitter).
    - Generamos una API de consulta con FastAPI que luego dockerizamos y desplegamos 
      utilizando Cloud Run una herramienta nativa de GCP. LINK DE PRUEBA: https://datalake-ltanlhfs7q-uc.a.run.app/docs
    - Dejamos link a la documentacion de la API: https://github.com/ArgumedoHector/Proyecto-Grupal---Olist/blob/main/Semana%203/API%20de%20consulta.pdf
-   - Utilizamos modelos de Machine Learning con motores de análisis de sentimientos, ya sea para mejorar 
-     proceso de ventas y/o posicionamiento de marca.
+   
 
 <img src ='https://bharatsraj.com/wp-content/uploads/2021/05/fastapi.png' height = 150> <img src ='https://datascientest.com/es/wp-content/uploads/sites/7/2020/10/power-bi-logo-1.jpg' height = 150>
 
 
 - Cuarta semana :
-   - Utilizamos Python para trabajar con Machine Learning haciendo análisis de sentimientos de tweets y google reviews
+   - Utilizamos modelos de Machine Learning con motores de análisis de sentimientos, ya sea para mejorar proceso de ventas y/o posicionamiento de marca.
    - Se crearon varios modelos de analisis: Regresión Logistica Multinomial, Maquina de Soporte Vectorial, Naive Bayes Multinomial, Random Forest y Ensamble. 
    - Los modelos de Machine Learning se desplegaron desde Streamlit. Link: https://argumedohector-proyecto-grupal---olist-streamlitmain-9lwyyz.streamlit.app/
+   - Dejamos link a la documentación de la app de Streamlit: https://github.com/ArgumedoHector/Proyecto-Grupal---Olist/blob/main/Semana%204/Streamlit%20-%20guia%20de%20uso.pdf
  
 <img src ='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png' height = 200> <img src ='https://www.fsm.ac.in/blog/wp-content/uploads/2022/08/ml-e1610553826718.jpg' height = 200> <img src ='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-8aMOv8h5F-tVRP7LGodjG0BzAZK27_v0wh1WJ1HFcnIZiH04oW23tuCVUI_7tQdEsGI&usqp=CAU' height = 200>
  
  
 # Worflow:
  ![image](https://user-images.githubusercontent.com/109697217/215760213-c90720b3-7b88-48d3-93e6-5c7afbebb526.png)
+ 
+ 
+# Modelo de Machine Learning:
+ - Con la tabla provista por Olist “olist_order_reviews_dataset.csv” que tiene utilizables cerca de 41000 registros, la usamos de base para armar el modelo ya que contiene comentarios y una calificación de la experiencia del usuario. 
+ - Usando Python y librerías como NLTK, procedimos a la limpieza de los comentarios: eliminando usuarios, hashtags, caracteres especiales, números, URLs, etc.
+ - Tokenizamos, sacamos las stopwords, y realizamos la derivación. 
+ - Con el scoring, realizamos la polarización clasificando en “Positivo”, “Neutro”, y “Negativo”.
+ - Para alimentar los modelos de Machine Learning, realizamos la vectorización de los comentarios, utilizando unigramas, para luego realizar el entrenamiento.
+ - Seleccionamos los modelos de categorización de Regresión Logística Multinomial, SVM, Naive Bayes, Random Forest, y un modelo de Ensamble que pondera entre los 4 modelos seleccionados y toma una opción intermedia. 
+ - Contando con el entrenamiento apropiado, testeamos con la propia base de Olist y con bases externas como Twitter y Google Reviews. 
+ - Desplegamos en la herramienta Streamlit los modelos de machine learning para que el usuario pueda realizar sus análisis, brindando la opción de traer una base de datos propia o seleccionando alguna red social en particular.
+ - Actualmente se encuentra cargada Google Reviews, y Twitter en forma demostrativa.  LINK A STREMLIT
+ 
+ ![workflow ml](https://user-images.githubusercontent.com/109697217/215772679-fb794cd6-0a16-47ba-8507-bc2c7bc7b79a.jpeg)
 
