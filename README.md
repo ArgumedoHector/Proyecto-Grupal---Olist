@@ -84,4 +84,8 @@ diferentes plataformas (Google review y Twitter).
    - Los modelos de Machine Learning se desplegaron desde Streamlit. Link: https://argumedohector-proyecto-grupal---olist-streamlitmain-9lwyyz.streamlit.app/
  
 <img src ='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png' height = 200> <img src ='https://www.fsm.ac.in/blog/wp-content/uploads/2022/08/ml-e1610553826718.jpg' height = 200> <img src ='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-8aMOv8h5F-tVRP7LGodjG0BzAZK27_v0wh1WJ1HFcnIZiH04oW23tuCVUI_7tQdEsGI&usqp=CAU' height = 200>
+ 
+ 
+# Worflow:
+ ![image](https://user-images.githubusercontent.com/109697217/215760213-c90720b3-7b88-48d3-93e6-5c7afbebb526.png)
 
