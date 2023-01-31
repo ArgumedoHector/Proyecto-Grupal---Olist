@@ -72,7 +72,7 @@ diferentes plataformas (Google review y Twitter).
    - Generamos una API de consulta con FastAPI que luego dockerizamos y desplegamos 
      utilizando Cloud Run una herramienta nativa de GCP. LINK DE PRUEBA: https://datalake-ltanlhfs7q-uc.a.run.app/docs
    - Dejamos link a la documentacion de la API: https://github.com/ArgumedoHector/Proyecto-Grupal---Olist/blob/main/Semana%203/API%20de%20consulta.pdf
-   - Utilizamos modelos de Machine Learning con motores de recomendación y/o análisis de sentimientos, ya sea para mejorar 
+   - Utilizamos modelos de Machine Learning con motores de análisis de sentimientos, ya sea para mejorar 
      proceso de ventas y/o posicionamiento de marca.
 
 <img src ='https://bharatsraj.com/wp-content/uploads/2021/05/fastapi.png' height = 150> <img src ='https://datascientest.com/es/wp-content/uploads/sites/7/2020/10/power-bi-logo-1.jpg' height = 150>
