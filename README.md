@@ -54,6 +54,8 @@ diferentes plataformas (Google review y Twitter).
      datos limpios y normalizados. 
    - Creación de un diccionario de datos
    - Carga de datos a la nube de Google Cloud Plataform, donde se definirá un Data Lake o Data Warehouse.
+
+ <img src ='https://miro.medium.com/max/1200/1*Ptv1_9wX9O2Rm2IBklyufw.png' height = 150><img src ='https://sarasanalytics.com/wp-content/uploads/2022/07/ETL-using-Python.jpg' height = 150>
  
  - Segunda semana:    
    - Con Google Cloud Functions, herramienta nativa de la plataforma, pretendemos automatizar los procesos anteriores utilizando cono disparador cada carga de archivos      nuevas en un *Bucket*.
@@ -62,9 +64,25 @@ diferentes plataformas (Google review y Twitter).
    - Creamos un DATA-WAREHOSE en BigQuery, herramienta de GCP, tomando esos archivos del Bucket "Stage" y creamos tablas para luego ser consultadas por medio de            lenguaje SQL. 
    - Link del video que resume el movimiento de los archivos: https://youtu.be/MtjFQ8BEaMk
    
+<img src ='https://i.pinimg.com/originals/8c/59/60/8c5960af6cf46913129f7ef927229af7.png' height = 150><img src ='https://miro.medium.com/max/584/1*q4EVSAndlvgFLyR6ncc4Bg.png' height = 150><img src ='https://usercentrics.com/wp-content/uploads/2021/03/Google-BigQuery.png' height = 150>
+
  - Tercer semana:
-   - Aplicaremos la herramienta de Power BI para generar dashboards con analisis, metricas y KPIs.
+   - Aplicamos la herramienta de Power BI para generar dashboards con analisis, metricas y KPIs.
+   - Nuestro dashboard podrá ser acccesado por medio de Power BI Online con una cuenta de usuario que dispondremos para el cliente, de todas maneras subiremos a este repositorio el archivo descargable para que sea abierto por Power BI Desktop.
+   - Generamos una API de consulta con FastAPI que luego dockerizamos y desplegamos 
+     utilizando Cloud Run una herramienta nativa de GCP. LINK: https://datalake-ltanlhfs7q-uc.a.run.app/docs
+   - Dejamos link a la documentacion de la API: 
    - Utilizaremos modelos de Machine Learning con motores de recomendación y/o análisis de sentimientos, ya sea para mejorar 
      proceso de ventas y/o posicionamiento de marca.
+
+<img src ='https://bharatsraj.com/wp-content/uploads/2021/05/fastapi.png' height = 150>
+<img src ='https://datascientest.com/es/wp-content/uploads/sites/7/2020/10/power-bi-logo-1.jpg' height = 150>
+
+
+- Cuarta semana :
+   - Utilizamos Python para trabajar con Machine Learning haciendo análisis de sentimientos de tweets y google reviews
+   - Se crearon varios modelos de analisis: Regresión Logistica Multinomial, Maquina de Soporte Vectorial, Naive Bayes Multinomial, Random Forest y Ensamble. 
+   - Los modelos de Machine Learning se desplegaron desde Streamlit. Link: https://ricardotalavera-analisis-sentimiento--main-e8wfck.streamlit.app/Sentimiento_Redes_Sociales 
  
-<img src ='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png' height = 150><img src ='https://i.pinimg.com/originals/8c/59/60/8c5960af6cf46913129f7ef927229af7.png' height = 150><img src ='https://miro.medium.com/max/584/1*q4EVSAndlvgFLyR6ncc4Bg.png' height = 150>
+<img src ='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png' height = 150><img src ='https://www.fsm.ac.in/blog/wp-content/uploads/2022/08/ml-e1610553826718.jpg' height = 150><img src ='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-8aMOv8h5F-tVRP7LGodjG0BzAZK27_v0wh1WJ1HFcnIZiH04oW23tuCVUI_7tQdEsGI&usqp=CAU' height = 150>
+
