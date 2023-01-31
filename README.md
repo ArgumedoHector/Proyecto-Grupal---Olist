@@ -99,7 +99,7 @@ diferentes plataformas (Google review y Twitter).
  - Seleccionamos los modelos de categorización de Regresión Logística Multinomial, SVM, Naive Bayes, Random Forest, y un modelo de Ensamble que pondera entre los 4 modelos seleccionados y toma una opción intermedia. 
  - Contando con el entrenamiento apropiado, testeamos con la propia base de Olist y con bases externas como Twitter y Google Reviews. 
  - Desplegamos en la herramienta Streamlit los modelos de machine learning para que el usuario pueda realizar sus análisis, brindando la opción de traer una base de datos propia o seleccionando alguna red social en particular.
- - Actualmente se encuentra cargada Google Reviews, y Twitter en forma demostrativa.  LINK A STREMLIT
+ - Actualmente se encuentra cargada Google Reviews, y Twitter en forma demostrativa.  
  
  ![workflow ml](https://user-images.githubusercontent.com/109697217/215772679-fb794cd6-0a16-47ba-8507-bc2c7bc7b79a.jpeg)
 
