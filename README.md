@@ -64,9 +64,9 @@ compras, entre otros.
 
  - Tercer semana:
    - Aplicamos la herramienta de Power BI para generar dashboards con análisis, métricas y KPIs.
-   - Nuestro dashboard puede ser accedido por medio de Power BI Online con una cuenta de usuario que se dispone para el cliente. De todas maneras subimos a este repositorio el archivo descargable para que sea abierto por Power BI Desktop. LINK: [Archivo de Power BI]('https://github.com/ArgumedoHector/Proyecto-Grupal---Olist/blob/main/Semana%203/Dashboard%20Proyecto%20Olist.pbix')
-   - Generamos una API de consulta con FastAPI que luego dockerizamos y desplegamos utilizando Cloud Run, una herramienta nativa de GCP. LINK DE PRUEBA: [Api de consulta]('https://datalake-ltanlhfs7q-uc.a.run.app/docs')
-   - Dejamos link a la documentacion de la API: [Documentacion de la API]('https://github.com/ArgumedoHector/Proyecto-Grupal---Olist/blob/main/Semana%203/API%20de%20consulta.pdf')
+   - Nuestro dashboard puede ser accedido por medio de Power BI Online con una cuenta de usuario que se dispone para el cliente. De todas maneras subimos a este repositorio el archivo descargable para que sea abierto por Power BI Desktop. LINK: [Archivo de Power BI](https://github.com/ArgumedoHector/Proyecto-Grupal---Olist/blob/main/Semana%203/Dashboard%20Proyecto%20Olist.pbix)
+   - Generamos una API de consulta con FastAPI que luego dockerizamos y desplegamos utilizando Cloud Run, una herramienta nativa de GCP. LINK DE PRUEBA: [Api de consulta](https://datalake-ltanlhfs7q-uc.a.run.app/docs)
+   - Dejamos link a la documentacion de la API: [Documentación](https://github.com/ArgumedoHector/Proyecto-Grupal---Olist/blob/main/Semana%203/API%20de%20consulta.pdf)
    - Preprocesamiento de datos para análisis de Machine Learning
    
 
@@ -76,8 +76,8 @@ compras, entre otros.
 - Cuarta semana :
    - Utilizamos modelos de Machine Learning con motores de análisis de sentimientos, ya sea para mejorar proceso de ventas y/o posicionamiento de marca.
    - Se crearon varios modelos de aprendizaje: Regresión Logística Multinomial, Máquina de Soporte Vectorial, Naive Bayes Multinomial, Random Forest, y Ensamble. 
-   - Los modelos de Machine Learning se desplegaron desde Streamlit. Link: [app Streamlit]('https://argumedohector-proyecto-grupal---olist-streamlitmain-9lwyyz.streamlit.app/')
-   - Dejamos el link a la documentación de la app de Streamlit: [Documentacion de la app]('https://github.com/ArgumedoHector/Proyecto-Grupal---Olist/blob/main/Semana%204/Streamlit%20-%20guia%20de%20uso.pdf')
+   - Los modelos de Machine Learning se desplegaron desde Streamlit. Link: [app Streamlit](https://argumedohector-proyecto-grupal---olist-streamlitmain-9lwyyz.streamlit.app/)
+   - Dejamos el link a la documentación de la app de Streamlit: [Documentacion de la app](https://github.com/ArgumedoHector/Proyecto-Grupal---Olist/blob/main/Semana%204/Streamlit%20-%20guia%20de%20uso.pdf)
  
 <img src ='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png' height = 200> <img src ='https://www.fsm.ac.in/blog/wp-content/uploads/2022/08/ml-e1610553826718.jpg' height = 200> <img src ='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-8aMOv8h5F-tVRP7LGodjG0BzAZK27_v0wh1WJ1HFcnIZiH04oW23tuCVUI_7tQdEsGI&usqp=CAU' height = 200>
  
@@ -100,3 +100,11 @@ compras, entre otros.
  ![workflow ml](https://user-images.githubusercontent.com/109697217/215772679-fb794cd6-0a16-47ba-8507-bc2c7bc7b79a.jpeg)
 
 
+# Participantes del Proyecto:
+ - [José Jimenez](https://github.com/Jojimene85)
+ - [Lucila Alonso](https://github.com/lucilaalonso)
+ - [Norberto Nasif](https://github.com/Norberto2906)
+ - [Ricardo Talavera](https://github.com/ricardotalavera)
+ - [Argumedo Héctor](https://github.com/ArgumedoHector)
+  
+El mayor agradecimiento a cada uno de ustedes. 
