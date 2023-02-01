@@ -64,7 +64,8 @@ compras, entre otros.
 
  - Tercer semana:
    - Aplicamos la herramienta de Power BI para generar dashboards con análisis, métricas y KPIs.
-   - Nuestro dashboard puede ser accedido por medio de Power BI Online con una cuenta de usuario que se dispone para el cliente. De todas maneras subimos a este repositorio el archivo descargable para que sea abierto por Power BI Desktop. LINK: [Archivo de Power BI](https://github.com/ArgumedoHector/Proyecto-Grupal---Olist/blob/main/Semana%203/Dashboard%20Proyecto%20Olist.pbix)
+   - Nuestro dashboard puede ser descargado para ser visto por medio de Power BI Desktop. LINK: [Archivo de Power BI](https://github.com/ArgumedoHector/Proyecto-Grupal---Olist/blob/main/Semana%203/Dashboard%20Proyecto%20Olist.pbix)
+   - Tambien puede ser accedido via web por el siguiente link: [Dashboard Online](https://app.powerbi.com/view?r=eyJrIjoiYjRhYjRmYTktNDUyZC00YjY5LWFlM2UtZDk3MmU1NjRkYjVjIiwidCI6IjEyMTYyMGY3LWQ2MDYtNGZlMS1hZjRjLWFiZGUwZjFkYWM2MyJ9)
    - Generamos una API de consulta con FastAPI que luego dockerizamos y desplegamos utilizando Cloud Run, una herramienta nativa de GCP. LINK DE PRUEBA: [Api de consulta](https://datalake-ltanlhfs7q-uc.a.run.app/docs)
    - Dejamos link a la documentacion de la API: [Documentación](https://github.com/ArgumedoHector/Proyecto-Grupal---Olist/blob/main/Semana%203/API%20de%20consulta.pdf)
    - Preprocesamiento de datos para análisis de Machine Learning
